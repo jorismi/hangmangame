@@ -1,19 +1,4 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -24,15 +9,80 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nbTry {
+  position: absolute;
+  top: 5%;
+  left: 5%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.currentWordToFind {
+  position: absolute;
+  top: 15%;
+  font-size: 5rem;
+  text-align: center;
+  letter-spacing: 2rem;
+}
+
+.keyboard {
+  position: absolute;
+  bottom: 15%;
+  display: grid;
+  grid-template-columns: repeat(10, 2vw);
+  padding: 1rem 2rem;
+  grid-gap: 1rem 2rem;
+  grid-template-rows: repeat(3, 4rem);
+  border: 1px solid white;
+  border-radius: 25px;
+  place-items: center;
+}
+
+.keyboard > p {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin: 0;
+  min-width: 2rem;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.keyboard > p:hover {
+  background-color: #444b58;
+}
+
+.keyboard > .disabledKey,
+.keyboard > .disabledKey:hover {
+  color: gray;
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+
+.victoryWrapper {
+  text-align: center;
+}
+
+.victoryWrapper > h2 {
+  font-size: 6rem;
+  font-weight: 800;
+}
+
+.victoryWrapper > p {
+  font-size: 3rem;
+}
+
+.victoryWrapper > button {
+  text-align: center;
+  color: white;
+  background-color: #282c34;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid white;
+  padding: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.victoryWrapper > button:hover {
+  background-color: #444b58;
 }
